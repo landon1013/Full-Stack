@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html ng-app="FullStax">
+<head>
+    <title>FullStax</title>
+</head>
+<body ng-controller="mainCtrl">
+
+<div class="display-inline">
+    <h2>Friends</h2>
+    <ul ng-repeat="friend in friends">
+        <li>name: {{friend.name}}</li>
+        <li>age: {{friend.age}}</li>
+        <li>When we met: {{friend.met}}</li>
+    </ul>
+    <button ng-click="getFriends()">Get Friends</button>
+</div>
+
+<div class="display-inline">
+    <h2>Family</h2>
+    <ul ng-repeat="familyMember in family">
+        <li>name: {{familyMember.name}}</li>
+        <li>age: {{familyMember.age}}</li>
+        <li>relationship: {{familyMember.relationship}}</li>
+    </ul>
+    <button ng-click="getFamily()">Get Family</button>
+</div>
+
+<div class="display-inline">
+    <h2>Activities</h2>
+    <ul ng-repeat="activity in activities">
+        <li>name: {{activity.name}}</li>
+    </ul>
+
+    <button ng-click="getActivities()">Get Activities</button>
+</div>
+
+<div class="display-inline">
+    <h2>About Me!</h2>
+    <ul ng-hide="!me">
+        <li>name: {{me.name}}</li>
+        <li>height: {{me.height}}</li>
+        <li>age: {{me.age}}</li>
+        <li>Favorite Movie: {{me.favMovie}}</li>
+        <li>Favorite Artist: {{me.favArtist}}</li>
+        <li>Favorite Food: {{me.favFood}}</li>
+    </ul>
+
+    <button ng-click="getMe()">About Me</button>
+</div>
+
+
+<div class="friend">
+    <h3>Create a New Friend</h3>
+    <input class="new" type="text" name="name" placeholder="Enter Name" ng-model="newFriend.name">
+    <input class="new" type="text" name="age" placeholder="Enter Age" ng-model="newFriend.age">
+    <input class="new" type="text" name="met" placeholder="Enter Year Met" ng-model="newFriend.met">
+
+    <button ng-click="addFriends()">Add Friend</button>
+</div>
+
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.20/angular.js"></script>
+<script src="js/app.js"></script>
+<script src="js/myCtrl.js"></script>
+<script src="js/myService.js"></script>
+</body>
+</html>

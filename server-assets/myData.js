@@ -1,4 +1,4 @@
-var family = [
+var familyMembers = [
     {
         name: "Lori",
         age: 60,
@@ -21,12 +21,12 @@ var family = [
     }
 ];
 
-module.exports.getFamily = function() {
-    return family;
+module.exports.getFamilyMembers = function() {
+    return familyMembers;
 };
 
-module.exports.addFamily = function(newFamily) {
-    family.push(newFamily);
+module.exports.addFamilyMembers = function(newFamilyMember) {
+    familyMembers.push(newFamilyMember);
 };
 
 var friends = [
@@ -79,7 +79,7 @@ module.exports.addActivity = function(newActivity) {
 
 var me = {
     name: "Landon",
-    height: "6\' 2\"",
+    height: "6' 2\"",
     age: 25,
     favMovie: "The Guardian",
     favArtist: "Van Gough",
